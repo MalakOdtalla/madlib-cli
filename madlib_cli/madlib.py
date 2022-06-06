@@ -47,14 +47,12 @@ def copyFile(text):
 
 if __name__ == "__main__":
     welcome_msg()
-
     content = read_templet("../assests/input.txt")
     parts = parse_templet(content)
-
     word = []
     for i in parts[0]:
-        msg = input("Enter a  " + i + ":")
-        word.append(msg)
+        input = input("Enter a  " + i + ":")
+        word.append(input)
     copy = merge(parts[1], word)
     copyFile(copy)
 
